@@ -1,0 +1,9 @@
+env/
+.idea
+*.log
+*.logs
+**/migrations/**
+/node_modules
+/static
+vue/.vscode
+vue/.idea

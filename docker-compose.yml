@@ -1,0 +1,45 @@
+version: '3.7'
+services:
+  back:
+    build: .
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/usr/src/wagtailsite/
+    ports:
+      - 8000:8000
+    environment:
+      - "CORS_ORIGIN_ALLOW_ALL=True"
+    expose: [8000, 8080]
+    env_file:
+      - .env.dev
+    depends_on:
+      - db
+      - frontend
+
+  frontend:
+    build:
+      context: .
+      dockerfile: vue/frontend.dockerfile
+    command: yarn dev
+    expose: [8000, 8080]
+    ports:
+      - 8080:8080
+    volumes:
+      - ./vue/vite.config.ts:/app/vite.config.ts
+      - ./vue:/app
+      - /app/node_modules
+
+  db:
+    image: postgres:13.0-alpine
+    restart: unless-stopped
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=qza1726354
+      - POSTGRES_DB=wagtailsite
+
+volumes:
+  postgres_data:
+  esdata:
+    driver: local

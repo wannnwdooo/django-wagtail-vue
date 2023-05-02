@@ -1,0 +1,14 @@
+Django>=4.1,<4.2
+drf-yasg==1.21.5
+django-mptt==0.14.0
+djoser==2.1.0
+djangorestframework-simplejwt==4.8.0
+django-allauth==0.53.1
+django-filter==23.1
+psycopg2-binary==2.9.5
+wagtail>=4.2,<4.3
+wagtail-autocomplete==0.10.0
+Faker==18.4.0
+transliterate==1.10.2
+django-cors-headers==3.14.0
+django-browser-reload==1.8.0

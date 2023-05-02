@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% if page.banner_image %}
+    <img src="{{ page.banner_image.url }}" alt="{{ page.banner_image.title }}" />
+  {% endif %}
+
+<!--  <h1>Welcome to my website!</h1>-->
+<!--  <v-blogger-page />-->
+<!--    {% for post in page.get_children %}-->
+<!--&lt;!&ndash;    {{ post }}&ndash;&gt;-->
+<!--    <v-the-children :title="'{{ post }}'"></v-the-children>-->
+<!--    {% endfor %}-->
+<!--    dvgcvb-->
+<!--  </v-blog-page>-->
+<!--  <p>Here you will find all kinds of interesting things.</p>-->
+{% endblock %}
