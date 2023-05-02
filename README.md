@@ -104,7 +104,7 @@ and develop on the Wagtail/Django port.
 
 We still have a hot reload and other features.
 
-Frontenders in the project will only be interested in the home folders (even if it is the Wagtail folder), Vue and media / assets,
+Frontend in the project will only be interested in the home folders (even if it is the Wagtail folder), Vue and media / assets,
 the latter will store all static images.
 
 Since this is an MPA, and therefore not typical for Vue developers, it imposes some restrictions.
@@ -119,8 +119,8 @@ Next, we create a page, it will be the base for its children.
 These child pages, we describe as dynamic in router.
 
 What does this give us? We don't mix vue components and Wagtail/Django templates,
-we don’t understand other syntax, we don’t send props from the template and we don’t do deep props drilling,
-but we just work with api through services and we can use the state manager.
+we don’t understand other syntax, we don’t send props from the template, and we don’t do deep props drilling,
+but we just work with api through services, and we can use the state manager.
 
 That is, MPA are all base pages, but they are SPA for all child pages.
 
@@ -129,7 +129,7 @@ To fix this, we need to check the url on the main pages to see if the page is th
 You can see an example based on the blog page.
 
 Also, when creating a new main blog page, you need to create an appropriate template.
-Go to the home/template/home folder and create a page in there like blog_page or home_page.
+Go to the home/template/home folder and create a page in their like blog_page or home_page.
 
 You can create child pages by hovering over the main page and selecting "Add Child Page".
 Further settings you must carry out through the service (example blog.service) and router.
